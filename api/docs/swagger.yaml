@@ -1,0 +1,1869 @@
+definitions:
+  handler.ErrorResponse:
+    properties:
+      code:
+        type: integer
+      message:
+        type: string
+    type: object
+  handler.Response:
+    properties:
+      data: {}
+      description:
+        type: string
+      status:
+        type: integer
+    type: object
+  models.Branch:
+    properties:
+      address:
+        type: string
+      created_at:
+        type: string
+      id:
+        type: string
+      name:
+        type: string
+      phone:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  models.Client:
+    properties:
+      active:
+        type: boolean
+      birthday:
+        type: string
+      branch_id:
+        type: string
+      created_at:
+        type: string
+      father_name:
+        type: string
+      first_name:
+        type: string
+      gender:
+        type: string
+      id:
+        type: string
+      last_name:
+        type: string
+      phone:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  models.Coming:
+    properties:
+      branch_id:
+        type: string
+      created_at:
+        type: string
+      date:
+        type: string
+      id:
+        type: string
+      increment_id:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  models.CreateBranch:
+    properties:
+      address:
+        type: string
+      name:
+        type: string
+      phone:
+        type: string
+    type: object
+  models.CreateClient:
+    properties:
+      active:
+        type: boolean
+      birthday:
+        type: string
+      branch_id:
+        type: string
+      father_name:
+        type: string
+      first_name:
+        type: string
+      gender:
+        type: string
+      last_name:
+        type: string
+      phone:
+        type: string
+    type: object
+  models.CreateComing:
+    properties:
+      branch_id:
+        type: string
+      date:
+        type: string
+      increment_id:
+        type: string
+    type: object
+  models.CreatePickingList:
+    properties:
+      coming_increment_id:
+        type: string
+      price:
+        type: number
+      product_id:
+        type: string
+      quantity:
+        type: integer
+    type: object
+  models.CreateProduct:
+    properties:
+      branch_id:
+        type: string
+      name:
+        type: string
+      price:
+        type: number
+    type: object
+  models.CreateRemainder:
+    properties:
+      branch_id:
+        type: string
+      coming_price:
+        type: number
+      product_id:
+        type: string
+      quantity:
+        type: integer
+      sale_price:
+        type: number
+    type: object
+  models.CreateSale:
+    properties:
+      branch_id:
+        type: string
+      client_id:
+        type: string
+      increment_id:
+        type: string
+      total_price:
+        type: number
+    type: object
+  models.CreateSaleProduct:
+    properties:
+      price:
+        type: number
+      product_id:
+        type: string
+      quantity:
+        type: integer
+      sale_id:
+        type: string
+      sale_increment_id:
+        type: string
+      total_price:
+        type: number
+    type: object
+  models.PickingList:
+    properties:
+      coming_id:
+        type: string
+      coming_increment_id:
+        type: string
+      created_at:
+        type: string
+      id:
+        type: string
+      price:
+        type: number
+      product_id:
+        type: string
+      quantity:
+        type: integer
+      total_price:
+        type: number
+      updated_at:
+        type: string
+    type: object
+  models.Product:
+    properties:
+      branch_id:
+        type: string
+      created_at:
+        type: string
+      id:
+        type: string
+      name:
+        type: string
+      price:
+        type: number
+      updated_at:
+        type: string
+    type: object
+  models.Remainder:
+    properties:
+      branch_id:
+        type: string
+      coming_price:
+        type: number
+      created_at:
+        type: string
+      id:
+        type: string
+      name:
+        type: string
+      product_id:
+        type: string
+      quantity:
+        type: integer
+      sale_price:
+        type: number
+      updated_at:
+        type: string
+    type: object
+  models.Sale:
+    properties:
+      branch_id:
+        type: string
+      client_id:
+        type: string
+      created_at:
+        type: string
+      debd:
+        type: number
+      id:
+        type: string
+      increment_id:
+        type: string
+      paid:
+        type: number
+      total_price:
+        type: number
+      updated_at:
+        type: string
+    type: object
+  models.SaleProduct:
+    properties:
+      created_at:
+        type: string
+      id:
+        type: string
+      price:
+        type: number
+      product_id:
+        type: string
+      quantity:
+        type: integer
+      sale_id:
+        type: string
+      sale_increment_id:
+        type: string
+      total_price:
+        type: number
+      updated_at:
+        type: string
+    type: object
+  models.UpdateBranch:
+    properties:
+      address:
+        type: string
+      id:
+        type: string
+      name:
+        type: string
+      phone:
+        type: string
+    type: object
+  models.UpdateClient:
+    properties:
+      active:
+        type: boolean
+      birthday:
+        type: string
+      branch_id:
+        type: string
+      father_name:
+        type: string
+      first_name:
+        type: string
+      gender:
+        type: string
+      id:
+        type: string
+      last_name:
+        type: string
+      phone:
+        type: string
+    type: object
+  models.UpdateComing:
+    properties:
+      branch_id:
+        type: string
+      date:
+        type: string
+      id:
+        type: string
+      status:
+        type: string
+    type: object
+  models.UpdatePickingList:
+    properties:
+      coming_id:
+        type: string
+      coming_increment_id:
+        type: string
+      price:
+        type: number
+      product_id:
+        type: string
+      quantity:
+        type: integer
+    type: object
+  models.UpdateProduct:
+    properties:
+      branch_id:
+        type: string
+      id:
+        type: string
+      name:
+        type: string
+      price:
+        type: number
+    type: object
+  models.UpdateRemainder:
+    properties:
+      branch_id:
+        type: string
+      coming_price:
+        type: number
+      product_id:
+        type: string
+      quantity:
+        type: integer
+      sale_price:
+        type: number
+    type: object
+  models.UpdateSale:
+    properties:
+      branch_id:
+        type: string
+      client_id:
+        type: string
+      debd:
+        type: number
+      id:
+        type: string
+      increment_id:
+        type: string
+      paid:
+        type: number
+      total_price:
+        type: number
+    type: object
+  models.UpdateSaleProduct:
+    properties:
+      id:
+        type: string
+      price:
+        type: number
+      product_id:
+        type: string
+      quantity:
+        type: integer
+      sale_id:
+        type: string
+      sale_increment_id:
+        type: string
+      total_price:
+        type: number
+    type: object
+info:
+  contact: {}
+paths:
+  /branch:
+    get:
+      consumes:
+      - application/json
+      description: Get List branch details by its ok.
+      parameters:
+      - description: Offset
+        in: query
+        name: offset
+        type: integer
+      - description: Limit
+        in: query
+        name: limit
+        type: integer
+      - description: search
+        in: query
+        name: search
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Branch details
+          schema:
+            $ref: '#/definitions/models.Branch'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: Branch not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Get List branch
+      tags:
+      - branch
+    post:
+      consumes:
+      - application/json
+      description: Create branch
+      parameters:
+      - description: Branch ID
+        in: body
+        name: object
+        required: true
+        schema:
+          $ref: '#/definitions/models.CreateBranch'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Branch details
+          schema:
+            $ref: '#/definitions/models.Branch'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: Branch not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: create a branch
+      tags:
+      - branch
+  /branch/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Get List branch details by its ok
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Branch details
+          schema:
+            $ref: '#/definitions/models.Branch'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: Branch not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Get List branch
+      tags:
+      - branch
+    get:
+      consumes:
+      - application/json
+      description: Get branch details by its ID.
+      parameters:
+      - description: Branch ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Branch details
+          schema:
+            $ref: '#/definitions/models.Branch'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: Branch not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Get a branch by ID
+      tags:
+      - branch
+    put:
+      consumes:
+      - application/json
+      description: Get List branch details by its ok.
+      parameters:
+      - description: models.UpdateBranch
+        in: body
+        name: object
+        required: true
+        schema:
+          $ref: '#/definitions/models.UpdateBranch'
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Branch details
+          schema:
+            $ref: '#/definitions/models.Branch'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: Branch not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Update branch
+      tags:
+      - branch
+  /client:
+    get:
+      consumes:
+      - application/json
+      description: Get List Client details by its ok.
+      parameters:
+      - description: Offset
+        in: query
+        name: offset
+        type: integer
+      - description: Limit
+        in: query
+        name: limit
+        type: integer
+      - description: search
+        in: query
+        name: search
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Client details
+          schema:
+            $ref: '#/definitions/models.Client'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: Client not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Get List Client
+      tags:
+      - Client
+    post:
+      consumes:
+      - application/json
+      description: Create Client
+      parameters:
+      - description: Client ID
+        in: body
+        name: object
+        required: true
+        schema:
+          $ref: '#/definitions/models.CreateClient'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Client details
+          schema:
+            $ref: '#/definitions/models.Client'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: Client not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: create a Client
+      tags:
+      - Client
+  /client/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Get List Client details by its ok
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Client details
+          schema:
+            $ref: '#/definitions/models.Client'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: Client not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Get List Client
+      tags:
+      - Client
+    get:
+      consumes:
+      - application/json
+      description: Get Client details by its ID.
+      parameters:
+      - description: Client ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Client details
+          schema:
+            $ref: '#/definitions/models.Client'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: Client not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Get a Client by ID
+      tags:
+      - Client
+    put:
+      consumes:
+      - application/json
+      description: Get List Client details by its ok.
+      parameters:
+      - description: models.UpdateClient
+        in: body
+        name: object
+        required: true
+        schema:
+          $ref: '#/definitions/models.UpdateClient'
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Client details
+          schema:
+            $ref: '#/definitions/models.Client'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: Client not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Update Client
+      tags:
+      - Client
+  /coming:
+    get:
+      consumes:
+      - application/json
+      description: Get a list of Comings with optional filtering.
+      parameters:
+      - description: Number of items to return (default 10)
+        in: query
+        name: limit
+        type: integer
+      - description: Number of items to skip (default 0)
+        in: query
+        name: offset
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: List of Comings
+          schema:
+            items:
+              $ref: '#/definitions/models.Coming'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Get a list of Comings
+      tags:
+      - Coming
+    post:
+      consumes:
+      - application/json
+      description: Create a new Coming in the market system.
+      parameters:
+      - description: Coming information
+        in: body
+        name: Coming
+        required: true
+        schema:
+          $ref: '#/definitions/models.CreateComing'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created Coming
+          schema:
+            $ref: '#/definitions/models.Coming'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Create a new Coming
+      tags:
+      - Coming
+  /coming/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete an existing Coming.
+      parameters:
+      - description: Coming ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "204":
+          description: No Content
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Delete an Coming
+      tags:
+      - Coming
+    get:
+      consumes:
+      - application/json
+      description: Get Coming details by its ID.
+      parameters:
+      - description: Coming ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Coming details
+          schema:
+            $ref: '#/definitions/models.Coming'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: Coming not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Get an Coming by ID
+      tags:
+      - Coming
+    put:
+      consumes:
+      - application/json
+      description: Update an existing Coming.
+      parameters:
+      - description: Coming ID
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: Updated Coming information
+        in: body
+        name: Coming
+        required: true
+        schema:
+          $ref: '#/definitions/models.UpdateComing'
+      produces:
+      - application/json
+      responses:
+        "202":
+          description: Updated Coming
+          schema:
+            $ref: '#/definitions/models.Coming'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: Coming not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Update an Coming
+      tags:
+      - Coming
+  /make_pay:
+    post:
+      consumes:
+      - application/json
+      description: Get List Coming details by its ok.
+      parameters:
+      - description: sale_id
+        in: query
+        name: sale_id
+        type: string
+      - description: Pay money
+        in: query
+        name: money
+        required: true
+        type: number
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Coming details
+          schema:
+            $ref: '#/definitions/models.Coming'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: Coming not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: MakePay
+      tags:
+      - Pay
+  /picking_list:
+    get:
+      consumes:
+      - application/json
+      description: Get List PickingList details by its ok.
+      parameters:
+      - description: Offset
+        in: path
+        name: offset
+        type: integer
+      - description: Limit
+        in: path
+        name: limit
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: PickingList details
+          schema:
+            $ref: '#/definitions/models.PickingList'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: PickingList not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Get List PickingList
+      tags:
+      - PickingList
+    post:
+      consumes:
+      - application/json
+      description: Create PickingList
+      parameters:
+      - description: PickingList ID
+        in: body
+        name: object
+        required: true
+        schema:
+          $ref: '#/definitions/models.CreatePickingList'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: PickingList details
+          schema:
+            $ref: '#/definitions/models.PickingList'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: PickingList not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: create a PickingList
+      tags:
+      - PickingList
+  /picking_list/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Get List PickingList details by its ok
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: PickingList details
+          schema:
+            $ref: '#/definitions/models.PickingList'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: PickingList not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Get List PickingList
+      tags:
+      - PickingList
+    get:
+      consumes:
+      - application/json
+      description: Get PickingList details by its ID.
+      parameters:
+      - description: PickingList ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: PickingList details
+          schema:
+            $ref: '#/definitions/models.PickingList'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: PickingList not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Get a PickingList by ID
+      tags:
+      - PickingList
+    put:
+      consumes:
+      - application/json
+      description: Get List PickingList details by its ok.
+      parameters:
+      - description: models.UpdatePickingList
+        in: body
+        name: object
+        required: true
+        schema:
+          $ref: '#/definitions/models.UpdatePickingList'
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: PickingList details
+          schema:
+            $ref: '#/definitions/models.PickingList'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: PickingList not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Update PickingList
+      tags:
+      - PickingList
+  /product:
+    get:
+      consumes:
+      - application/json
+      description: Get List Product details by its ok.
+      parameters:
+      - description: Offset
+        in: query
+        name: offset
+        type: integer
+      - description: Limit
+        in: query
+        name: limit
+        type: integer
+      - description: search
+        in: query
+        name: search
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Product details
+          schema:
+            $ref: '#/definitions/models.Product'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: Product not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Get List Product
+      tags:
+      - Product
+    post:
+      consumes:
+      - application/json
+      description: Create Product
+      parameters:
+      - description: Product ID
+        in: body
+        name: object
+        required: true
+        schema:
+          $ref: '#/definitions/models.CreateProduct'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Product details
+          schema:
+            $ref: '#/definitions/models.Product'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: Product not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: create a Product
+      tags:
+      - Product
+  /product/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Get List Product details by its ok
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Product details
+          schema:
+            $ref: '#/definitions/models.Product'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: Product not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Get List Product
+      tags:
+      - Product
+    get:
+      consumes:
+      - application/json
+      description: Get Product details by its ID.
+      parameters:
+      - description: Product ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Product details
+          schema:
+            $ref: '#/definitions/models.Product'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: Product not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Get a Product by ID
+      tags:
+      - Product
+    put:
+      consumes:
+      - application/json
+      description: Get List Product details by its ok.
+      parameters:
+      - description: models.UpdateProduct
+        in: body
+        name: object
+        required: true
+        schema:
+          $ref: '#/definitions/models.UpdateProduct'
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Product details
+          schema:
+            $ref: '#/definitions/models.Product'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: Product not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Update Product
+      tags:
+      - Product
+  /remainder:
+    get:
+      consumes:
+      - application/json
+      description: Get List Remainder details by its ok.
+      parameters:
+      - description: Offset
+        in: path
+        name: offset
+        type: integer
+      - description: Limit
+        in: path
+        name: limit
+        type: integer
+      - description: search
+        in: path
+        name: search
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Remainder details
+          schema:
+            $ref: '#/definitions/models.Remainder'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: Remainder not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Get List Remainder
+      tags:
+      - Remainder
+    post:
+      consumes:
+      - application/json
+      description: Create Remainder
+      parameters:
+      - description: Remainder ID
+        in: body
+        name: object
+        required: true
+        schema:
+          $ref: '#/definitions/models.CreateRemainder'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Remainder details
+          schema:
+            $ref: '#/definitions/models.Remainder'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: Remainder not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: create a Remainder
+      tags:
+      - Remainder
+  /remainder/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Get List Remainder details by its ok
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Remainder details
+          schema:
+            $ref: '#/definitions/models.Remainder'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: Remainder not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Get List Remainder
+      tags:
+      - Remainder
+    get:
+      consumes:
+      - application/json
+      description: Get Remainder details by its ID.
+      parameters:
+      - description: Remainder ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Remainder details
+          schema:
+            $ref: '#/definitions/models.Remainder'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: Remainder not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Get a Remainder by ID
+      tags:
+      - Remainder
+    put:
+      consumes:
+      - application/json
+      description: Get List Remainder details by its ok.
+      parameters:
+      - description: models.UpdateRemainder
+        in: body
+        name: object
+        required: true
+        schema:
+          $ref: '#/definitions/models.UpdateRemainder'
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Remainder details
+          schema:
+            $ref: '#/definitions/models.Remainder'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: Remainder not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Update Remainder
+      tags:
+      - Remainder
+  /report:
+    get:
+      consumes:
+      - application/json
+      description: Report
+      operationId: Report
+      parameters:
+      - description: Start date in Year-Month-Day format
+        in: query
+        name: from_date
+        type: string
+      - description: End date in Year-Month-Day format
+        in: query
+        name: to_date
+        type: string
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: OverallReportBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.Client'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Report
+      tags:
+      - Report
+  /sale:
+    get:
+      consumes:
+      - application/json
+      description: Get List Sale details by its ok.
+      parameters:
+      - description: Offset
+        in: query
+        name: offset
+        type: integer
+      - description: Limit
+        in: query
+        name: limit
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Sale details
+          schema:
+            $ref: '#/definitions/models.Sale'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: Sale not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Get List Sale
+      tags:
+      - Sale
+    post:
+      consumes:
+      - application/json
+      description: Create Sale
+      parameters:
+      - description: Sale ID
+        in: body
+        name: object
+        required: true
+        schema:
+          $ref: '#/definitions/models.CreateSale'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Sale details
+          schema:
+            $ref: '#/definitions/models.Sale'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: Sale not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: create a Sale
+      tags:
+      - Sale
+  /sale/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Get List Sale details by its ok
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Sale details
+          schema:
+            $ref: '#/definitions/models.Sale'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: Sale not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Get List Sale
+      tags:
+      - Sale
+    get:
+      consumes:
+      - application/json
+      description: Get Sale details by its ID.
+      parameters:
+      - description: Sale ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Sale details
+          schema:
+            $ref: '#/definitions/models.Sale'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: Sale not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Get a Sale by ID
+      tags:
+      - Sale
+    put:
+      consumes:
+      - application/json
+      description: Get List Sale details by its ok.
+      parameters:
+      - description: models.UpdateSale
+        in: body
+        name: object
+        required: true
+        schema:
+          $ref: '#/definitions/models.UpdateSale'
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Sale details
+          schema:
+            $ref: '#/definitions/models.Sale'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: Sale not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Update Sale
+      tags:
+      - Sale
+  /saleproduct:
+    get:
+      consumes:
+      - application/json
+      description: Get List SaleProduct details by its ok.
+      parameters:
+      - description: Offset
+        in: query
+        name: offset
+        type: integer
+      - description: Limit
+        in: query
+        name: limit
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: SaleProduct details
+          schema:
+            $ref: '#/definitions/models.SaleProduct'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: SaleProduct not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Get List SaleProduct
+      tags:
+      - SaleProduct
+    post:
+      consumes:
+      - application/json
+      description: Create SaleProduct
+      parameters:
+      - description: SaleProduct ID
+        in: body
+        name: object
+        required: true
+        schema:
+          $ref: '#/definitions/models.CreateSaleProduct'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: SaleProduct details
+          schema:
+            $ref: '#/definitions/models.SaleProduct'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: SaleProduct not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: create a SaleProduct
+      tags:
+      - SaleProduct
+  /saleproduct/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Get List SaleProduct details by its ok
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: SaleProduct details
+          schema:
+            $ref: '#/definitions/models.SaleProduct'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: SaleProduct not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Get List SaleProduct
+      tags:
+      - SaleProduct
+    get:
+      consumes:
+      - application/json
+      description: Get SaleProduct details by its ID.
+      parameters:
+      - description: SaleProduct ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: SaleProduct details
+          schema:
+            $ref: '#/definitions/models.SaleProduct'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: SaleProduct not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Get a SaleProduct by ID
+      tags:
+      - SaleProduct
+    put:
+      consumes:
+      - application/json
+      description: Get List SaleProduct details by its ok.
+      parameters:
+      - description: models.UpdateSaleProduct
+        in: body
+        name: object
+        required: true
+        schema:
+          $ref: '#/definitions/models.UpdateSaleProduct'
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: SaleProduct details
+          schema:
+            $ref: '#/definitions/models.SaleProduct'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "404":
+          description: SaleProduct not found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Update SaleProduct
+      tags:
+      - SaleProduct
+swagger: "2.0"
